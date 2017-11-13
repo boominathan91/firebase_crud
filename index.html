@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Firebase App</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/toastr.css">	
+</head>
+<body>
+	<br><br>
+	<div class="container">
+	<button type="button" class="btn btn-primary btn_add">Add New</button>
+	<input type="hidden" id="total_count">
+	<table class="table">		
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>SKU</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>			
+		</tbody>
+	</table>
+</div>
+	<!-- Modal -->
+	<div id="pop_up" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Add Product</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form" id="new_form">
+						<div class="form-group">
+							<label  class="col-sm-2 control-label"
+							for="inputEmail3">SKU</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="sku" />
+							</div>
+						</div> 
+						<div class="form-group">
+							<label  class="col-sm-2 control-label"
+							for="inputEmail3">Description</label>
+							<div class="col-sm-10">
+								<textarea type="text" class="form-control" id="description" ></textarea>
+							</div>
+						</div> 
+						<div class="form-group">
+							<label  class="col-sm-2 control-label"
+							for="inputEmail3">Price</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="price" />
+							</div>
+						</div>
+						<input type="hidden" id='hidden_id' />
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn_save" >Submit</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Reset</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/toastr.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script src="js/app.js"></script>
+
+	</body>
+	</html>
